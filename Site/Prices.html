@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+    <link rel="stylesheet" type="text/css" href="Prices.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <meta charset="utf-8">
+    <title>Prices</title>
+    </head>
+
+  <body class="bg">
+
+    <div class="sticky-top">
+        <nav class="navbar">
+        <a class="logo" href="Home.html">
+            <img src="img/ecoride.svg" width="140" height="28" alt="">
+        </a>
+        <ul class="nav-links">
+            <li>
+            <a class="nav-link disabled, text-dark" href="Prices.html"><u>Prices</u></a>
+            </li>
+            <li>
+            <a class="nav-link disabled, text-dark" href="Transport.html">Transport</a>
+            </li>
+            <li>
+            <a class="nav-link disabled, text-dark" href="EcoNews.html">News</a>
+            </li>
+            <li>
+            <a class="nav-link disabled, text-dark" href="About us.html">About us</a>
+            </li>
+        </ul>
+        <div class="buttons">
+          <a href="Signup.html" type="button" class="Sign" style="text-decoration: none;">Sign up</a>
+          <a href="Login.html" type="button" class="Log" style="text-decoration: none; color: white;">Log In</a>
+        </div>
+      </nav>
+    </div>
+
+    <div class="header">
+      <p>Prices</p>
+    </div>
+
+    <div class="container">
+      <h1 class="cost">Trip cost calculator</h1>
+    </div>
+    <div class="block">
+        <div class="elementor-column width1">
+        <div class="whiteb">
+            <div class="whitet">
+              <h6>Which car do you choose?</h6>
+              <select id="myDropdown" onchange="changeImage()">
+                <option value="img/vw id3.png" data-min="0.10" data-hour="0.08" data-day="8" data-km="0.15">Volkswagen ID.3</option>
+                <option value="img/zoe-play.png" data-min="0.15" data-hour="9" data-day="15" data-km="0.08">Renault Zoe</option>
+                <option value="img/nissan.png" data-min="0.18" data-hour="0.18" data-day="18" data-km="0.09">Nissan Leaf</option>
+                <option value="img/bmw i3.png" data-min="0.25" data-hour="0.25" data-day="25" data-km="0.12">BMW i3</option>
+                <option value="img/Free_Tesla_Mockup копия.png" data-min="0.32" data-hour="12" data-day="85" data-km="0.18">Tesla Model 3</option>
+                <option value="img/tesla копия.png" data-min="0.24" data-hour="9.84" data-day="44.99" data-km="0.27">Tesla Model S</option>
+              </select>
+            </div>
+            <div class="row">
+                <div class="col">
+                  <div class="h5">
+                    <h6>How long is your trip going to be?</h6>
+                    <div class="row">
+                      <div class="col">
+                        <div class="form-group">
+                          <div class="input-wrapper">
+                            <input style="width: 100%;" type="text" placeholder="00" maxlength="2" id="car-calculate-days"
+                              class="input input--small js-car-price-calculate" max="31" oninput="calculateJourneyPrice()">
+                          </div>
+                        </div>
+                        <p style="text-align: center;">Days</p>
+                      </div>
+                      <div class="col">
+                        <div class="form-group">
+                          <div class="input-wrapper">
+                            <input style="width: 100%;" type="text" placeholder="00" maxlength="2" id="car-calculate-hours"
+                              class="input input--small js-car-price-calculate" max="24" oninput="calculateJourneyPrice()">
+                          </div>
+                        </div>
+                        <p style="text-align: center;">Hours</p>
+                      </div>
+                      <div class="col">
+                        <div class="form-group">
+                          <div class="input-wrapper">
+                            <input style="width: 100%;" type="text" placeholder="00" maxlength="2" id="car-calculate-min" max="59" oninput="calculateJourneyPrice()">
+                          </div>
+                        </div>
+                        <p style="text-align: center;">Min.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-group">
+                    <div class="km">
+                      <h6>How many kilometers?</h6>
+                    </div>
+                    <div class="input-wrapper">
+                      <input type="text" placeholder="0000" maxlength="4" id="car-calculate-km"
+                        class="input input--small js-car-price-calculate" oninput="calculateJourneyPrice()">
+                    </div>
+                  </div>
+                  <h5 style="text-align: center;">Kilometers</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        <div class="elementor-column width2">
+        <div class="redb">
+          <div class="textb">
+            <p>The price of this journey would be</p>
+          </div>
+          <div class="texth">
+            <h1 id="journey-price">0€</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+        <img class="carimg" id="displayImage" src="img/vw id3.png"
+        alt="Displayed Image">
+    </div>
+
+    <div class="container">
+      <h1 class="price">Car prices</h1>
+    </div>
+
+    <div class="extended-container">
+        <div class="column">
+            <img class="car-image" src="img/zoe-play.png" alt="Car 1">
+            <div class="car-title">Renault Zoe</div>
+            <div class="hr">
+              <hr>
+            </div>
+            <div class="time-info">
+                <div class="time-left">
+                  Min.
+                  <br>
+                  Hour
+                  <br>
+                  Day
+                </div>
+                <div class="time-right">
+                  0.15 €
+                  <br>
+                  0.10 €
+                  <br>
+                  0.10 €
+                </div>
+            </div>
+            <div class="hr">
+              <hr>
+            </div>
+            <div class="distance-info">
+                <div class="distance-left">
+                  Km
+                </div>
+                <div class="distance-right">
+                0.08 €
+                </div>
+            </div>
+            <a style="text-decoration: none; color: white;" class="learn-more" href="#">Learn more</a>
+        </div>
+        
+        <div class="column">
+            <img class="car-image" src="img/nissan.png" alt="Car 2">
+            <div class="car-title">Nissan Leaf</div>
+            <div class="hr">
+              <hr>
+            </div>
+            <div class="time-info">
+                <div class="time-left">
+                    Min.
+                    <br>
+                    Hour
+                    <br>
+                    Day
+                </div>
+                <div class="time-right">
+                    0.10 €
+                    <br>
+                    0.10 €
+                    <br>
+                    0.10 €
+                </div>
+            </div>
+            <div class="hr">
+              <hr>
+            </div>
+            <div class="distance-info">
+                <div class="distance-left">
+                    Km
+                </div>
+                <div class="distance-right">
+                    0.10 €
+                </div>
+            </div>
+            <a style="text-decoration: none; color: white;" class="learn-more" href="#">Learn more</a>
+        </div>
+        
+        <div class="column">
+            <img class="car-image" src="img/bmw i3.png" alt="Car 3">
+            <div class="car-title">BMW i3</div>
+            <div class="hr">
+              <hr>
+            </div>
+            <div class="time-info">
+                <div class="time-left">
+                    Min.
+                    <br>
+                    Hour
+                    <br>
+                    Day
+                </div>
+                <div class="time-right">
+                    0.10 €
+                    <br>
+                    0.10 €
+                    <br>
+                    0.10 €
+                </div>
+            </div>
+            <div class="hr">
+              <hr>
+            </div>
+            <div class="distance-info">
+                <div class="distance-left">
+                    Km
+                </div>
+                <div class="distance-right">
+                    0.10 €
+                </div>
+            </div>
+            <a style="text-decoration: none; color: white;" class="learn-more" href="#">Learn more</a>
+        </div>
+        
+        <div class="column">
+            <img class="car-image" src="img/vw id3.png" alt="Car 4">
+            <div class="car-title">Volkswagen ID.3</div>
+            <div class="hr">
+              <hr>
+            </div>
+            <div class="time-info">
+                <div class="time-left">
+                    Min.
+                    <br>
+                    Hour
+                    <br>
+                    Day
+                </div>
+                <div class="time-right">
+                    0.10 €
+                    <br>
+                    0.10 €
+                    <br>
+                    0.10 €
+                </div>
+            </div>
+            <div class="hr">
+              <hr>
+            </div>
+            <div class="distance-info">
+                <div class="distance-left">
+                    Km
+                </div>
+                <div class="distance-right">
+                    0.10 €
+                </div>
+            </div>
+            <a style="text-decoration: none; color: white;" class="learn-more" href="#">Learn more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="extended-container-two">
+      <div class="column-two">
+            <img class="car-image" src="img/Free_Tesla_Mockup копия.png" alt="Car 1">
+            <div class="car-title">Tesla Model 3</div>
+            <div class="hr">
+              <hr>
+            </div>
+            <div class="time-info">
+                <div class="time-left">
+                    Min.
+                    <br>
+                    Hour
+                    <br>
+                    Day
+                </div>
+                <div class="time-right">
+                    0.10 €
+                    <br>
+                    0.10 €
+                    <br>
+                    0.10 €
+                </div>
+            </div>
+            <div class="hr">
+              <hr>
+            </div>
+            <div class="distance-info">
+                <div class="distance-left">
+                    Km
+                </div>
+                <div class="distance-right">
+                    0.10 €
+                </div>
+            </div>
+            <a style="text-decoration: none; color: white;" class="learn-more" href="#">Learn more</a>
+      </div>
+        
+      <div class="column-two">
+          <img class="car-image" src="img/tesla копия.png" alt="Car 2">
+          <div class="car-title">Tesla Model S</div>
+          <div class="hr">
+            <hr>
+          </div>
+          <div class="time-info">
+              <div class="time-left">
+                  Min.
+                  <br>
+                  Hour
+                  <br>
+                  Day
+              </div>
+              <div class="time-right">
+                  0.10 €
+                  <br>
+                  0.10 €
+                  <br>
+                  0.10 €
+              </div>
+          </div>
+          <div class="hr">
+            <hr>
+          </div>
+          <div class="distance-info">
+              <div class="distance-left">
+                  Km
+              </div>
+              <div class="distance-right">
+                  0.10 €
+              </div>
+          </div>
+          <a style="text-decoration: none; color: white;" class="learn-more" href="#">Learn more</a>
+      </div>
+    </div>
+
+
+    <div>
+      <img class="bw" src="img/ecoride white black.png" >
+      <a href="#">
+          <img class="apple" src="img/Apple_16_9.full.high_quality.png" >
+      </a>
+      <a href="#">
+          <img class="android" src="img/Google-Play-Embleme.png" >
+      </a>
+      <img class="mockup" style="margin-top: 100px;" src="img/Iphone mock up.png" >
+  </div>
+  
+
+
+
+
+
+  <div class="endblock" >
+      <div class="layer1">
+          <img class="white" src="img/ecoride white.png" >
+          <p style="padding-right:400px;">EcoRide is a carsharing company that promotes sustainable transportation through its electric vehicle fleet and rewards program.</p>
+      </div>
+      <div class="layer2">
+          <div class="row">
+              <div class="col">
+                  <h4 style="margin-right: 25px;">COMPANY</h4>
+                  <a class="nav-link disabled, text-white" href="#">Contacts</a>
+                  <a class="nav-link disabled, text-white" href="#">About us</a>
+              </div>
+              <div class="col">
+                  <h4 style="margin-right: 70px;">TERMS</h4>
+                  <a class="nav-link disabled, text-white" href="#">Terms and Conditions</a>
+              </div>
+              <div class="col">
+                  <h4 style="margin-right: 62px;">PRIVACY</h4>
+                  <a class="nav-link disabled, text-white" href="#">Privacy policy</a>
+                  <a class="nav-link disabled, text-white" href="#">Cookie policy</a>
+              </div>
+              <div class="col">
+                  <div class="buttons" style="margin-right: 20%;">
+                      <a href="#" type="button" class="Signend" style="text-decoration: none;">Sign up</a>
+                      <a href="#" type="button" class="Logend" style="text-decoration: none; color: white; ">Log In</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="text2">
+      <hr style="margin-top: -130px;">
+      <p>Copyright ©  | All rights reserved. | Designed by Daniil</p>
+      <p>SIA „EcoRide“, Lauku iela 3b, LV-1009, Rīga</p>
+      <div class="endcolumn1">
+          <img class="email" src="img/email.png" >
+          <p>info@ecoride.lv</p>
+      </div>
+      <div class="endcolumn2">
+          <img class="call" src="img/call.png" >
+          <p>+371 26943250</p>
+      </div>
+      <div class="endcolumn3">
+          <p>Follow us:</p>
+          <a href="https://www.instagram.com/danliight/">
+              <img class="inst" src="img/inst.png" >
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=100008245296721">
+              <img class="fb" src="img/fb.png" >
+          </a>
+      </div>
+  </div>
+        
+
+    <script>
+      function changeImage() {
+      var imageSelector = document.getElementById("myDropdown");
+      var displayImage = document.getElementById("displayImage");
+
+      // Get the selected option value
+      var selectedImage = imageSelector.value;
+
+      // Update the source attribute of the image
+      displayImage.src = selectedImage;
+
+      calculateJourneyPrice();
+      }
+
+      function calculateJourneyPrice() {
+      var dropdown = document.getElementById("myDropdown");
+      var selectedOption = dropdown.options[dropdown.selectedIndex];
+
+      var minPrice = parseFloat(selectedOption.getAttribute("data-min"));
+      var hourPrice = parseFloat(selectedOption.getAttribute("data-hour"));
+      var dayPrice = parseFloat(selectedOption.getAttribute("data-day"));
+      var kmPrice = parseFloat(selectedOption.getAttribute("data-km"));
+
+      var days = parseInt(document.getElementById("car-calculate-days").value) || 0;
+      var hours = parseInt(document.getElementById("car-calculate-hours").value) || 0;
+      var minutes = parseInt(document.getElementById("car-calculate-min").value) || 0;
+      var kilometers = parseInt(document.getElementById("car-calculate-km").value) || 0;
+
+      var totalMinutes = days * 24 * 20 + hours * 40 + minutes;
+      var totalHours = totalMinutes / 40;
+
+      var totalPrice = 0;
+      if (totalMinutes > 0) {
+          totalPrice += totalMinutes * minPrice;
+      } else if (totalHours > 0) {
+          totalPrice += totalHours * hourPrice;
+      } else if (days > 0) {
+          totalPrice += days * dayPrice;
+      }
+
+      totalPrice += kilometers * kmPrice;
+
+      var journeyPrice = document.getElementById("journey-price");
+      journeyPrice.textContent = totalPrice.toFixed(2) + "€";
+      }
+    </script>
+  
+
+  </body>
+
+</html>

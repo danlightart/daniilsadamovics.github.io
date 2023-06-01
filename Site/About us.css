@@ -1,0 +1,470 @@
+.bg {
+    background-color: #F8F8FA;
+}
+
+u {
+    text-decoration: none;
+    border-bottom: 2px solid #000000;
+}
+
+.Sign {
+    background-color: white;
+    color: black;
+    border-radius: 64px;
+    border: 2px solid #000000;
+    padding: 5px 30px;
+    font-weight: 600;
+    text-decoration: none;
+    transition-duration: 0.5s;
+    
+
+}
+
+.Sign:hover {
+    background-color: #000000;
+    color: white;
+}
+
+.Log {
+    background: linear-gradient(90deg, #ED3838 0%, #E02A2A 100%);
+    border-radius: 64px;
+    color: white;
+    border: 0px;
+    margin-top: 5px;
+    padding: 7px 35px;
+    margin-left: 10px;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 70px;
+    background: #F8F8FA;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(190, 190, 190, 0.5); 
+    padding: 10px;
+
+}
+  
+.logo {
+    margin-bottom: 8px;
+}
+  
+  /* Стиль навигации */
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    padding-left: 100px;
+    list-style: none;
+    font-size: 18px;
+    margin-left: auto;
+    margin-right: auto;
+}
+  
+.nav-link {    /* Шире текст */
+    padding: 10px;
+    margin: 0 20px;
+    text-decoration: none;
+    color: #555555;
+    transition: all 0.3s ease;
+}
+  
+.nav-link:hover {
+    color: #000000;
+}
+
+.header {
+    margin-top: 70px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 54px;
+    background: linear-gradient(180deg, #E12B2B 40.63%, #000000 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.textblock1 {
+    height: 430px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #ffffff;
+    border-radius: 40px;
+    margin-top: 40px;
+}
+
+
+.textblock1 p {
+    position: absolute;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 39px;
+    padding-right: 630px;
+    padding-left: 50px;
+    padding-top: 60px;
+    color: #000000;
+}
+
+.container {
+    position: relative;
+}
+
+.map {
+    position: absolute;
+    height: 324px;
+    top: 170px;
+    left: 550px;
+}
+
+.Download_btn {
+    background: linear-gradient(90deg, #ED3838 0%, #E02A2A 100%);
+    border-radius: 64px;
+    color: white;
+    position: absolute;
+    width: 220px;
+    height: 60px;
+    left: 50px;
+    bottom: 30px;
+    font-size: 17px;
+    padding: 16px 25px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.container i {
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 5px;
+}
+  
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+
+
+.layer1 {
+    padding-left: 70px;
+    padding-right: 50px; 
+    margin-left: -20px;
+    float: left; /* Обтекание по правому краю */
+    color: white;
+    font-weight: 100;
+    font-size: 20px;
+    margin-top: 80px;
+
+}
+   
+.layer2 {
+    width: 80%; /* Ширина слоя */
+    float: left; /* Обтекание по правому краю */
+    text-align: center;
+    padding-top: 100px;
+
+}
+
+.column {
+    display: flex;
+    position: absolute;
+    text-align: left;
+    width: 805px;
+    height: 249px;
+    font-weight: 400;
+    font-size: 23px;
+    margin-left: 105px;
+    background: #FFFFFF;
+    border-radius: 40px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.column2 {
+    position: absolute;
+    text-align: left;
+    width: 805px;
+    height: 190px;
+    font-weight: 400;
+    font-size: 23px;
+    margin-left: 105px;
+    margin-top: 289px;
+    background: #FFFFFF;
+    border-radius: 40px;
+    padding: 20px;
+}
+
+.column3 {
+    position: absolute;
+    text-align: left;
+    width: 805px;
+    height: 220px;
+    font-weight: 400;
+    font-size: 23px;
+    margin-left: 105px;
+    margin-top: 500px;
+    background: #FFFFFF;
+    border-radius: 40px;
+    padding: 20px;
+}
+
+.column4 {
+    position: absolute;
+    text-align: left;
+    width: 805px;
+    height: 220px;
+    font-weight: 400;
+    font-size: 23px;
+    margin-left: 105px;
+    margin-top: 741px;
+    background: #FFFFFF;
+    border-radius: 40px;
+    padding: 20px;
+}
+
+.arrow {
+    float: left;
+}
+
+.date {
+    font-weight: 700;
+    font-size: 35px;
+    float: left;
+
+    margin-top: 30px;
+}
+
+.quest {
+
+    height: 296px;
+    margin-top: 1300px;
+
+    background: #000000;
+    border-radius: 40px;
+    
+}
+
+.quest h1 {
+    color: white;
+    position: absolute;
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 78px;
+    padding-left: 50px;
+    padding-top: 20px;
+}
+
+.quest p {
+    position: absolute;
+    font-weight: 400;
+    font-size: 25px;
+    padding-left: 50px;
+    padding-right: 460px;
+    padding-top: 140px;
+
+    color: #FFFFFF;
+}
+
+.contacts_btn {
+    background: linear-gradient(90deg, #ED3838 0%, #E02A2A 100%);
+    border-radius: 64px;
+    color: white;
+    position: absolute;
+    width: 190px;
+    height: 60px;
+    left: 850px;
+    bottom: 110px;
+    font-size: 20px;
+    padding: 14px 20px;
+    text-align: center;
+    font-weight: 700;
+}
+
+
+
+
+
+
+.mockup {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 100px;
+    margin-top: 200px;
+}
+
+.apple {
+    position: absolute;
+    height: 96px;
+    margin-top: 230px;
+    margin-left: 81%;
+}
+
+.android {
+    position: absolute;
+    height: 96px;
+    margin-top: 340px;
+    margin-left: 81%;
+}
+
+.bw {
+    position: absolute;
+    height: 70px;
+    margin-top: 210px;
+    margin-left: 50px;
+
+}
+
+.white {
+    position: absolute;
+    height: 40px;
+    margin-top: -90px;
+}
+
+hr {
+    border: none;
+    margin-bottom: -150px;
+    background: rgba(255, 255, 255, 0.5);
+    height: 1px;
+    margin-right: 65px;
+
+}
+
+.endblock {
+    height: 400px;
+    background: #000000;
+}
+
+.endblock h4 {
+    color: rgba(255, 255, 255, 0.5);;
+    text-align: right;
+    top: 1000px;
+}
+
+
+
+.text2 {
+    color: white;
+    margin-left: 80px;
+    font-size: 15px;
+    font-weight: 100;
+    margin-top: 30px;
+    
+
+}
+
+.endcolumn1 {
+    text-align: center;
+    color: white;
+    margin-left: 30%;
+    margin-top: -78px;
+
+}
+
+.call {
+    position: absolute;
+    height: 30px;
+    margin-left: -90px;
+    margin-top: -5px;
+}
+
+.email {
+    position: absolute;
+    height: 30px;
+    margin-left: -100px;
+    margin-top: -5px;
+}
+
+.endcolumn2 {
+    text-align: center;
+    color: white;
+    margin-left: 50%;
+    margin-top: -38px;
+
+}
+
+.endcolumn3 {
+    text-align: center;
+    color: white;
+    margin-left: 78%;
+    margin-top: -40px;
+
+}
+
+.inst {
+    position: absolute;
+    height: 40px;
+    margin-left: 45px;
+    margin-top: -45px;
+}
+
+.fb {
+    position: absolute;
+    height: 40px;
+    margin-left: 97px;
+    margin-top: -45px;
+    border-radius: 12px;
+}
+
+.layer3 {
+    padding-left: 100px;
+    padding-right: 50px; 
+    margin-left: -20px;
+    float: left; /* Обтекание по правому краю */
+    width: 50%; /* Ширина слоя */
+    color: white;
+    font-weight: 100;
+    font-size: 20px;
+    margin-top: 150px;
+}
+   
+.layer4 {
+    width: 50%; /* Ширина слоя */
+    float: left; /* Обтекание по правому краю */
+    text-align: center;
+    padding-top: 100px;
+}
+
+.Signend {
+    background-color: white;
+    color: black;
+    border-radius: 64px;
+    border: 2px solid #000000;
+    padding: 5px 30px;
+    font-weight: 400;
+    text-decoration: none;
+    transition-duration: 0.5s;
+    width: 173px;
+    height: 56px;
+    font-size: 24px;
+    margin-bottom: 5%;
+}
+
+.Signend:hover {
+    background-color: #000000;
+    color: white;
+    border: 2px solid white;
+}
+
+.Logend {
+    background: linear-gradient(90deg, #ED3838 0%, #E02A2A 100%);
+    border-radius: 64px;
+    color: white;
+    border: 0px;
+    margin-top: 5px;
+    padding: 7px 40px;
+    margin-left: 10px;
+    width: 173px;
+    height: 56px;
+    font-size: 24px;
+    font-weight: 400;
+    margin-right: 60px;
+}

@@ -1,0 +1,95 @@
+
+/* Общий фон */
+.bg {
+    background-color: #F8F8FA;
+    margin: 0;
+    padding: 0;
+}
+
+/* Логотип ссылка */
+.logo {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-decoration: none;
+    width: 160px;
+}
+
+/* Поля для ввода */
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Названия полей ввода */
+.input-label {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+/* Поля ввода */
+.input-field {
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ebebeb;
+    font-size: 16px;
+    border-radius: 15px;
+
+}
+
+:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
+/* Кнопка register */
+.register-button {
+    background: linear-gradient(90deg, #ED3838 0%, #E02A2A 100%);
+    border-radius: 64px;
+    color: white;
+    padding: 7px 35px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    border: 0px;
+}
+
+.register-button:hover {
+    background-color: #FF5252;
+}
+
+/* Ссылка "Forgot password?" */
+.forgot-password {
+    margin-top: 10px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+
+/* Картинки машин */
+.car-left {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    max-height: 80vh;
+    object-fit: cover;
+    width: 400px;
+}
+
+.car-right {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    max-height: 80vh;
+    object-fit: cover;
+    width: 400px;
+}
